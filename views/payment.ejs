@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stripe Payment</title>
+  <script src="https://js.stripe.com/v3/"></script>
+  <style>
+    /* Basic styles for the form */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    form {
+      width: 300px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    #card-element {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    #card-errors {
+      color: red;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Stripe Payment Page</h1>
+
+  <form id="payment-form">
+    <div>
+      <label for="card-element">
+        Credit or debit card
+      </label>
+      <div id="card-element">
+        <!-- Stripe.js will inject the Card Element here -->
+      </div>
+
+      <!-- Display payment errors -->
+      <div id="card-errors" role="alert"></div>
+    </div>
+
+    <button id="submit-button">Pay</button>
+  </form>
+
+  <!-- <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const stripe = Stripe('pk_test_51OOfstSFJ7Aq1ZGWA9bGuZImxh5u62wlj1aKs15ozgpbGxIfIpYuEDTePQNoRtobuKiwwoEh4X8fIDnFw1dmGgyT00WeJav9dP');
+      const elements = stripe.elements();
+      const cardElement = elements.create('card');
+      cardElement.mount('#card-element');
+  
+      const form = document.getElementById('payment-form');
+      const errorElement = document.getElementById('card-errors');
+  
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+  
+        try {
+          const { paymentIntent } = await fetch('/charge', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ payment_method_id: cardElement, token: 'token' }) // Replace 'YOUR_PAYMENT_TOKEN' with actual token if needed
+          }).then(response => response.json());
+  
+          if (paymentIntent === 'Payment successful!') {
+            // Payment successful action (e.g., show success message, redirect, etc.)
+            console.log('Payment successful!');
+          } else {
+            // Handle payment failure
+            errorElement.textContent = 'Payment failed!';
+          }
+        } catch (error) {
+          console.error('Error processing payment:', error);
+          errorElement.textContent = 'Payment failed!';
+        }
+      });
+    });
+  </script> -->
+  
+</body>
+</html>

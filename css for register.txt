@@ -1,0 +1,107 @@
+.contact{
+  background: url(./image/backgroundimg2.png);
+  padding-top: 71px;
+  color: #ffffff;
+  padding-bottom: 30px;
+}
+.txt{
+  text-align: center;
+}
+.txt h2{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 144.02%;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+.txt p{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 177.52%;
+
+  text-align: center;
+  margin-bottom: 10px;
+}
+.input{
+  display: flex;
+}
+input{
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  outline: none;
+  font-size: 17px;
+  padding: 0 15px;
+  width: 448px;
+  height: 52px;
+  margin-bottom: 45px;
+  margin-left: 164px;
+  margin-right: 56px;
+}
+.message{
+  width: 50%;
+  align-content: center;
+}
+textarea{
+  width: 575px;
+  height: 246px;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  margin-bottom: 45px;
+  margin-left: 40px;
+}
+.button{
+  height: 47px;
+  width: 170px;
+  margin-top: 10px;
+  margin-left: 40%;
+  margin-right: 40%;
+  
+}
+.select_option{
+  color: white;
+}
+select{
+  background:transparent;
+  background-color: #0b0c0e;
+  /* border-color: #0b0c0e; */
+  color:white;
+  margin-right: 20px;
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+text-transform: uppercase;
+justify-content: center;
+  /* border: 1px solid lightgray;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  margin-bottom: 45px;
+  margin-left: 40px;
+  width: 575px;
+  height: 52px; */
+  
+}
+
+.button button{
+  width: 100%;
+  height: 100%;
+  background: crimson;
+  border: 2px solid crimson;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
